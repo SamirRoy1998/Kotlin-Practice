@@ -4,7 +4,7 @@ fun main() {
     println("Enter your name: ")
     val a = readLine() //nullable
     val b = readln().toInt() //non-nullable if null throw run time exceptions
-    println(a)
+    println("hello $a")
     println(b*2)
 
     print("Age: ")
