@@ -40,7 +40,7 @@ fun main() {
     println("        <-e: e is reversed printing")
 //--------------------------------------------
     f = 4
-    while (f in 4..40 step 4){
+    while (f in 4..40 step 4) {
         print("$f ")
         f++
         f++
