@@ -1,6 +1,6 @@
 package practice_kotlin
 
-fun checkPrime(number: Int): Boolean {
+fun checkPrime1(number: Int): Boolean { // Inefficient
     var factorCount = 0
     for (i in 1..number) {
         if (number % i == 0) {
@@ -10,7 +10,19 @@ fun checkPrime(number: Int): Boolean {
     return factorCount==2
 }
 
+fun checkPrime2(number: Int): Boolean { //Efficient
+    var isPrime = true
+    for (i in 2..<number){
+        if (number%i==0){
+            isPrime=false
+            break
+        }
+    }
+    return isPrime
+}
+
 fun main() {
     val input = readln().toInt()
-    println(checkPrime(input))
+    println(checkPrime1(input)) // Inefficient
+    println(checkPrime2(input)) // Efficient
 }
