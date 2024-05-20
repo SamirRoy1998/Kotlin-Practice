@@ -23,6 +23,7 @@ fun f2(name: String = "Not Available", age: Int = 0, address: String = "Not Avai
                                                             //Functions with Default value and return a value
 fun sum(num1: Int = 0, num2: Int = 0): Int {
     val s = num1 + num2
+    if (s == 0) println("Please pass some numbers to Operate")
     return s
 }
 
