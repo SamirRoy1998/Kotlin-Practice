@@ -9,8 +9,8 @@ fun sum1(num1: Int=0, num2: Int=0): Int {
 val lambdaSum1 = { x: Int, y: Int -> x + y }
 
 fun main() {
-    val num1 =0;
-    val num2 =0;
+    val num1 =0
+    val num2 =0
     println("The sum of num1 and num2 is: ${sum1(num1, num2)}")
 
     print("Now Re-Enter your 1st Number: ")
