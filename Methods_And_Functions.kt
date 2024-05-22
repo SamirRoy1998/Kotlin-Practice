@@ -10,8 +10,10 @@ class Example1 {
     }
 
     fun main() {
+        println("I'm Class's main method start")
         val ex = Example1()
-        ex.test1()          //  <- Bug That have to fix
+        ex.test1()
+        println("Class's main method end")
     }
 }
 
@@ -19,4 +21,5 @@ fun main() {
     val ex = Example1()     //  <- Object a Create to call method
     test1()                 //  <- Calling a function
     ex.test1()              //  <- Calling a method
+    ex.main()
 }
