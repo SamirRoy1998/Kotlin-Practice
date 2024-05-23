@@ -1,16 +1,16 @@
 package practice_kotlin.opps
 
-class Phone {
+open class Phone {
     fun on() {
-        println("Turning on your Phone")
+        println("Turning on the Phone")
     }
 
     fun off() {
-        println("Turning off your Phone")
+        println("Turning off the Phone")
     }
 
     fun call() {
-        println("Calling your Phone")
+        println("Calling from your Phone")
     }
 
     fun message() {
@@ -18,7 +18,7 @@ class Phone {
     }
 }
 
-class FeaturePhone {
+open class FeaturePhone : Phone(){
     fun playMusic() {
         println("Music Playing")
     }
@@ -28,7 +28,7 @@ class FeaturePhone {
     }
 }
 
-class SmartPhone {
+class SmartPhone :FeaturePhone(){
     fun takePicture() {
         println("Taking Picture")
     }
@@ -64,4 +64,18 @@ class SmartPhone {
 
 fun main() {
     val sm = SmartPhone()
+    sm.on()
+    sm.call()
+    sm.message()
+    sm.playMusic()
+    sm.pauseMusic()
+    sm.takePicture()
+    sm.displayPicture()
+    sm.sendPicture()
+    sm.recordVideo()
+    sm.stopVideo()
+    sm.playVideo()
+    sm.pauseVideo()
+    sm.sendVideo()
+    sm.off()
 }
