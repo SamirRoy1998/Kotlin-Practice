@@ -2,6 +2,7 @@ package practice_kotlin.opps
 
 abstract class Animal {
     abstract val color: String
+    open val bread: String = "Asian"
     open fun eat() {
         println("Animal is eating")
     }
@@ -31,7 +32,7 @@ class Cat : Animal() {
 }
 
 class Dog(override val color: String) : Animal() {
-
+    override val bread: String = "Bull Dog"
     override fun eat() {
         println("Dog is eating")
     }
@@ -56,7 +57,8 @@ fun main() {
     cat.breathe()
     cat.roam()
     cat.speak()
-    println("=== === === === === === === ===")
+    println(cat.bread)
+    println("=== === === === ===")
     val dog = Dog("Black")
     dog.eat()
     dog.sleep()
@@ -65,4 +67,5 @@ fun main() {
     dog.speak()
     dog.bite()
     println(dog.color)
+    println(dog.bread)
 }
