@@ -1,6 +1,7 @@
 package practice_kotlin.opps
 
 abstract class Animal {
+    abstract val color: String
     open fun eat() {
         println("Animal is eating")
     }
@@ -18,6 +19,8 @@ abstract class Animal {
 }
 
 class Cat : Animal() {
+    override val color: String = "White"
+
     override fun roam() {
         println("Cat is walking")
     }
@@ -28,6 +31,8 @@ class Cat : Animal() {
 }
 
 class Dog : Animal() {
+    override val color: String = "Black"
+
     override fun eat() {
         println("Dog is eating")
     }
