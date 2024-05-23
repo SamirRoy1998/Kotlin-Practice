@@ -1,15 +1,15 @@
 package practice_kotlin.opps
 
 open class Phone {
-    fun on() {
+    open fun on() {
         println("Turning on the Phone")
     }
 
-    fun off() {
+    open fun off() {
         println("Turning off the Phone")
     }
 
-    fun call() {
+    open fun call() {
         println("Calling from your Phone")
     }
 
@@ -18,7 +18,19 @@ open class Phone {
     }
 }
 
-open class FeaturePhone : Phone(){
+open class FeaturePhone : Phone() {
+    override fun on() {
+        println("Turning on the Feature Phone")
+    }
+
+    override fun off() {
+        println("Turning off the Feature Phone")
+    }
+
+    override fun call() {
+        println("Call from your Feature Phone")
+    }
+
     fun playMusic() {
         println("Music Playing")
     }
@@ -28,7 +40,19 @@ open class FeaturePhone : Phone(){
     }
 }
 
-class SmartPhone :FeaturePhone(){
+class SmartPhone : FeaturePhone() {
+    override fun on() {
+        println("Turning on the Smart Phone")
+    }
+
+    override fun off() {
+        println("Turning off the Smart Phone")
+    }
+
+    override fun call() {
+        println("Call from your Smart Phone")
+    }
+
     fun takePicture() {
         println("Taking Picture")
     }
@@ -78,4 +102,17 @@ fun main() {
     sm.pauseVideo()
     sm.sendVideo()
     sm.off()
+    println("------------------------")
+
+    val fp = FeaturePhone()
+    fp.on()
+    fp.call()
+    fp.off()
+    println("------------------------")
+
+    val p = Phone()
+    p.on()
+    p.call()
+    p.off()
+    println("------------------------")
 }
