@@ -39,4 +39,25 @@ class Dog : Animal() {
     override fun speak() {
         println("Bow wow wow wow")
     }
+
+    fun bite() {
+        println("Dog is biting")
+    }
+}
+
+fun main() {
+    val cat = Cat()
+    cat.eat()
+    cat.sleep()
+    cat.breathe()
+    cat.roam()
+    cat.speak()
+    println("=== === === === === === === ===")
+    val dog = Dog()
+    dog.eat()
+    dog.sleep()
+    dog.breathe()
+    dog.roam()
+    dog.speak()
+    dog.bite()
 }
