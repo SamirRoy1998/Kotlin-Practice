@@ -30,8 +30,7 @@ class Cat : Animal() {
     }
 }
 
-class Dog : Animal() {
-    override val color: String = "Black"
+class Dog(override val color: String) : Animal() {
 
     override fun eat() {
         println("Dog is eating")
@@ -58,11 +57,12 @@ fun main() {
     cat.roam()
     cat.speak()
     println("=== === === === === === === ===")
-    val dog = Dog()
+    val dog = Dog("Black")
     dog.eat()
     dog.sleep()
     dog.breathe()
     dog.roam()
     dog.speak()
     dog.bite()
+    println(dog.color)
 }
