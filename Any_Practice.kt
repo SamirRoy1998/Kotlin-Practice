@@ -22,19 +22,29 @@ package practice_kotlin
 //}
 //--------------------------------------------------------------------------------------------
 //22-05-2024 10.42 pm
-class Abc {
-    var n: String
-    var a: Int
-
-    constructor(name: String, age: Int) {
-        n = name
-        a = age
-    }
+//class Abc {
+//    var n: String
+//    var a: Int
+//
+//    constructor(name: String, age: Int) {
+//        n = name
+//        a = age
+//    }
+//}
+//
+//fun main() {
+//    val obj = Abc("Samir", 25)
+//    println(obj.n)
+//    println(obj.a)
+//}
+//--------------------------------------------------------------------------------------------
+//24-05-2024 9.19 pm
+class Abc(name:String){
+    var name:String = name
 }
 
 fun main() {
-    val obj = Abc("Samir", 25)
-    println(obj.n)
-    println(obj.a)
+    val a = Abc("Samir")
+    println(a.name)
 }
 //--------------------------------------------------------------------------------------------
