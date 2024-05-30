@@ -20,3 +20,7 @@ fun main() {
     println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmailId))
     println()
 }
+
+fun displayAlertMessage(oS: String = "Unknown OS", emailId: String): String {
+    return "There's a new sign-in request on $oS for your Google Account $emailId."
+}
