@@ -1,5 +1,7 @@
 package practice_kotlin
 
+import java.util.*
+
 //fun main() {
 //    //20-05-2024
 //    println("Enter any number (1 to 99999999999999999)")
@@ -39,12 +41,28 @@ package practice_kotlin
 //}
 //--------------------------------------------------------------------------------------------
 //24-05-2024 9.19 pm
-class Abc(name:String){
-    var name:String = name
+//class Abc(name:String){
+//    var name:String = name
+//}
+//
+//fun main() {
+//    val a = Abc("Samir")
+//    println(a.name)
+//}
+//--------------------------------------------------------------------------------------------
+//31-05-2024 2.27 am
+fun main() {
+    val list = listOf(5, 3, 6, 7, 9, 1)
+    sortList(list)
+    println(list)
 }
 
-fun main() {
-    val a = Abc("Samir")
-    println(a.name)
+private fun sortList(list: List<Int>) {
+    for (i in 0..list.size - 1) {
+        for (j in 0..list.size - 2) {
+            if (list[j] > list[j + 1]) {
+                Collections.swap(list, j, j + 1)
+            }
+        }
+    }
 }
-//--------------------------------------------------------------------------------------------
